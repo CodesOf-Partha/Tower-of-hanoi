@@ -1,0 +1,38 @@
+.back{
+    position: relative;
+    float: left;
+}
+
+.front{
+    position: absolute;
+    float: left;
+    text-align: bottom;
+}
+h1{
+    font-family: 'Racing Sans One', cursive;
+}
+
+.top{
+    padding: 50% 10% 0px 0px;
+}
+
+.no_padding{
+    padding: 0px 0px 0px 0px !important;
+}
+
+
+
+.posi{
+    margin-top: 27.5%;
+}
+
+.borderless tr, .borderless th {
+    border: none;
+    padding: 0px 0px 0px 0px !important;
+}
+
+.hei{
+    height:500px;
+    width:100%;
+    z-index: 1;
+}

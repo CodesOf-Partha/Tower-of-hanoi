@@ -5,7 +5,6 @@ function myFunc(id, val) {
   if(stack3[0].length==3){
     $('.modal').modal();
     reset();
-    alert("You won");
   }
   if (flag == 2) {
     if (id == 120 || id == 110 || id == 100) {

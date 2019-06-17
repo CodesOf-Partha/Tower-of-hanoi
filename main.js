@@ -2,21 +2,29 @@ var popped,public_id; var i, j;
 var stack1 = [[3, 2, 1], [120, 110, 100]], stack2 = [[], [121, 111, 101]], stack3 = [[], [122, 112, 102]];
 flag = 2;
 function myFunc(id, val) {
+  if(stack3[0].length==3){
+    $('.modal').modal();
+    reset();
+    alert("You won");
+  }
   if (flag == 2) {
     if (id == 120 || id == 110 || id == 100) {
       public_id=id;
+      len=stack1[0].length-1;
       popped = stack1[0].pop();
-      document.getElementById(id).innerHTML = "<img src='img/dummy.png' class='img-fluid'>";
+      document.getElementById(stack1[1][len]).innerHTML = "<img src='img/dummy.png' class='img-fluid'>";
     }
     if (id == 121 || id == 111 || id == 101) {
       public_id=id;
+      len=stack2[0].length-1;
       popped = stack2[0].pop();
-      document.getElementById(id).innerHTML = "<img src='img/dummy.png' class='img-fluid'>";
+      document.getElementById(stack2[1][len]).innerHTML = "<img src='img/dummy.png' class='img-fluid'>";
     }
     if (id == 122 || id == 112 || id == 102) {
       public_id=id;
+      len=stack3[0].length-1;
       popped = stack3[0].pop();
-      document.getElementById(id).innerHTML = "<img src='img/dummy.png' class='img-fluid'>";
+      document.getElementById(stack3[1][len]).innerHTML = "<img src='img/dummy.png' class='img-fluid'>";
     }
     flag -= 1;
   } else {
@@ -74,6 +82,7 @@ function myFunc(id, val) {
     flag = 2;
   }
 }
+
 function recover(public_id,popped){
   document.getElementById(public_id).innerHTML = "<img src='img/" + popped + ".png' class='img-fluid'>";
   if (public_id == 120 || public_id == 110 || public_id == 100) {

@@ -2,10 +2,6 @@ var popped,public_id; var i, j;
 var stack1 = [[3, 2, 1], [120, 110, 100]], stack2 = [[], [121, 111, 101]], stack3 = [[], [122, 112, 102]];
 flag = 2;
 function myFunc(id, val) {
-  if(stack3[0].length==3){
-    $('.modal').modal();
-    reset();
-  }
   if (flag == 2) {
     if (id == 120 || id == 110 || id == 100) {
       public_id=id;
@@ -80,6 +76,12 @@ function myFunc(id, val) {
     }
     flag = 2;
   }
+  (function () {
+    if(stack3[0].length==3){
+      $('.modal').modal();
+      reset();
+    }
+  })();
 }
 
 function recover(public_id,popped){

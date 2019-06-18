@@ -85,15 +85,35 @@ function myFunc(id, val) {
 }
 
 function recover(public_id,popped){
-  document.getElementById(public_id).innerHTML = "<img src='img/" + popped + ".png' class='img-fluid'>";
   if (public_id == 120 || public_id == 110 || public_id == 100) {
     stack1[0].push(popped);
+    for (i = 0; i < stack1[0].length; i++) {
+      for (j = 0; j < stack1[0].length; j++) {
+        if (i == j) {
+          document.getElementById(stack1[1][i]).innerHTML = "<img src='img/" + stack1[0][i] + ".png' class='img-fluid'>";
+        }
+      }
+    }
   }
   if (public_id== 121 || public_id == 111 || public_id == 101) {
     stack2[0].push(popped);
+    for (i = 0; i < stack2[0].length; i++) {
+      for (j = 0; j < stack2[0].length; j++) {
+        if (i == j) {
+          document.getElementById(stack2[1][i]).innerHTML = "<img src='img/" + stack2[0][i] + ".png' class='img-fluid'>";
+        }
+      }
+    }
   }
   if (public_id == 122 || public_id == 112 || public_id == 102) {
     stack3[0].push(popped);
+    for (i = 0; i < stack3[0].length; i++){
+      for (j = 0; j < stack3[0].length; j++){
+        if (i == j) {
+          document.getElementById(stack3[1][i]).innerHTML = "<img src='img/" + stack3[0][i] + ".png' class='img-fluid'>";
+        }
+      }
+    }
   }
 }
 
